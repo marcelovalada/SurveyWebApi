@@ -1,24 +1,23 @@
-# README
+#Survey Web Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##Sobre
+Essa API simula a criação de pesquisas. As pesquisas são formadas por perguntas e respostas.
+Existem 2 tipos de usuários, os Coordinators (permissões de administrador) e os Respondents. Exixte um usuário de cada tipo cadastrado no seed.
 
-Things you may want to cover:
+##Pré-requisitos
+- Rubi
+- Rails
+- Bundler
+- Postgresql
 
-* Ruby version
+##Instalação
+Rodar o "bundler install" para instalar as gems necessárias.
+"rails db:create" para criar as entidades no banco de dados.
+"rails db:migrate" para fazer as alterações do banco de dados.
+"rails db:seed" para criar um usuário de cada, como padrão.
+"rails server" para rodar o servidor local.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+##Funcionalidades
+- Um usuário existente deve fazer o login.
+- O usuário Coordinator pode criar, editar, excluir e ler as pesquisas.
+- O usuário Respondents pode ler e responder as pesquisas.
