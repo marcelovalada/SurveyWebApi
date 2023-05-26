@@ -19,6 +19,9 @@ gem 'puma', '~> 5.0'
 gem 'devise'
 gem 'simple_token_authentication'
 
+gem 'graphql', '~> 1.10', '>= 1.10.9'
+gem 'graphiql-rails', '~> 1.7'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
