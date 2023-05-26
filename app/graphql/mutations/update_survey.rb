@@ -1,22 +1,22 @@
 module Mutations
-  class CreateSurvey < BaseMutation
+  class UpdateSurvey < BaseMutation
     # TODO: define return fields
     field :survey, Types::SurveyType, null: false
 
     # TODO: define arguments
+    argument :id, ID, required: true
     argument :title, String, required: true
 
     # TODO: define resolve method
-    def resolve(title:)
-      survey = Survey.new(title: title)
-      if survey.save
+    def resolve(id:, title:)
+      survey = Survey.find(id)
+
+      if survey.update(id: id, title: title)
         {
           survey: survey,
-          errors: [],
         }
       else
         {
-          survey: nil,
           errors: survey.errors.full_messages
         }
       end
