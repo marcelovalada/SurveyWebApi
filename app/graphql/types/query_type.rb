@@ -18,5 +18,10 @@ module Types
       Answer.all
     end
 
+    field :users, [UserType], null: true
+    def users
+      User.all
+    end
+
   end
 end
