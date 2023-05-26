@@ -11,7 +11,7 @@ module Mutations
     def resolve(id:, title:)
       survey = Survey.find(id)
 
-      if survey.update(id: id, title: title)
+      if survey.update(title: title)
         {
           survey: survey,
         }
